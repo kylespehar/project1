@@ -27,31 +27,35 @@
         // Coupon Conditionals
         // $5 Coupon
         if (data == 'coupon1' && what == 'membership1'){
-            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for three months of membership in the Conservative Collegiates Group. Your first month's fee will be $14.00 and the remaining two months will cost $19.00.</h5>";
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for three months of membership in the Conservative Collegiates Group. Your first month's fee will be $14.00 and the remaining two months will cost $19.00.</h5>";
         }
         else if (data == 'coupon1' && what == 'membership2'){
-            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for three months of membership in the Professional Bite&#8211;Me Group. Your first month's fee will be $34.00 and the remaining two months will cost $39.00.</h5>";
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for three months of membership in the Professional Bite&#8211;Me Group. Your first month's fee will be $34.00 and the remaining two months will cost $39.00.</h5>";
+        }
+        else if (data == 'coupon1' && what == 'membership3'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for three months of membership in the Cardiac Courtesy Group. There will be no charge for this service over your three month membership.</h5>";
         }
     
         // $10 Coupon
         if (data == 'coupon2' && what == 'membership1'){
-            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for six months of membership in the Conservative Collegiates Group. Your first month's fee will be $9.00 and the remaining five months will cost $19.00.</h5>";
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for six months of membership in the Conservative Collegiates Group. Your first month's fee will be $9.00 and the remaining five months will cost $19.00.</h5>";
         }
         else if (data == 'coupon2' && what == 'membership2'){
-            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for six months of membership in the Professional Bite&#8211;Me Group. Your first month's fee will be $29.00 and the remaining five months will cost $39.00.</h5>";
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for six months of membership in the Professional Bite&#8211;Me Group. Your first month's fee will be $29.00 and the remaining five months will cost $39.00.</h5>";
+        }
+        else if (data == 'coupon2' && what == 'membership3'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for six months of membership in the Cardiac Courtesy Group. There will be no charge for this service over your six month membership.</h5>";
         }
         
         // $25 Coupon
         if (data == 'coupon3' && what == 'membership1'){
-            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for one year of membership in the Conservative Collegiates Group. Your first month's fee will be FREE and the remaining eleven months will cost $19.00.</h5>";
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for one year of membership in the Conservative Collegiates Group. Your first month's fee will be FREE and the remaining eleven months will cost $19.00.</h5>";
         }
         else if (data == 'coupon3' && what == 'membership2'){
-            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for one year of membership in the Conservative Collegiates Group. Your first month's fee will be $14.00 and the remaining eleven months will cost $39.00.</h5>";
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for one year of membership in the Conservative Collegiates Group. Your first month's fee will be $14.00 and the remaining eleven months will cost $39.00.</h5>";
         }
-        
-        // Free Membership
-        if (data == 'coupon1' && what == 'membership3' || data == 'coupon2' && what == 'membership3' || data == 'coupon3' && what == 'membership3'){
-            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you now have access to attorneys at no charge.</h5>";
+        else if (data == 'coupon3' && what == 'membership3'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for one year of membership in the Cardiac Courtesy Group. There will be no charge for this service over your one year membership.</h5>";
         }
         
         // Page clears for Confirmation
