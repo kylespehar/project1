@@ -1,6 +1,5 @@
 body {
     background-image: url('../images/background.png');
-
 }
 
 #content_container {
@@ -93,10 +92,10 @@ h6 {
 #membership3 {
     float: left;
     background-color: #B0B0B0;
-    border: 3px solid #606060;
+    border: 6px solid #606060;
     width: 240px;
     height: 95px;
-    margin-top: 3.75%;
+    margin-top: 6%;
     margin-left: 3.75%;
     padding: 3px;
 }

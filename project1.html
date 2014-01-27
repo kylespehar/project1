@@ -33,34 +33,43 @@
         // $5 Coupon
         if (data == 'coupon1' && what == 'membership1'){
             document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for three months of membership in the Conservative Collegiates Group. Your first month's fee will be $14.00 and the remaining two months will cost $19.00.</h5>";
+        //alert("1x1");
         }
         else if (data == 'coupon1' && what == 'membership2'){
             document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for three months of membership in the Professional Bite&#8211;Me Group. Your first month's fee will be $34.00 and the remaining two months will cost $39.00.</h5>";
+        //alert("1x2");
         }
         else if (data == 'coupon1' && what == 'membership3'){
             document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for three months of membership in the Cardiac Courtesy Group. There will be no charge for this service over your three month membership.</h5>";
+        //alert("1x3");
         }
     
         // $10 Coupon
         if (data == 'coupon2' && what == 'membership1'){
             document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for six months of membership in the Conservative Collegiates Group. Your first month's fee will be $9.00 and the remaining five months will cost $19.00.</h5>";
+        //alert("2x1");
         }
         else if (data == 'coupon2' && what == 'membership2'){
             document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for six months of membership in the Professional Bite&#8211;Me Group. Your first month's fee will be $29.00 and the remaining five months will cost $39.00.</h5>";
+        //alert("2x2");
         }
         else if (data == 'coupon2' && what == 'membership3'){
             document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for six months of membership in the Cardiac Courtesy Group. There will be no charge for this service over your six month membership.</h5>";
+        //alert("2x3");
         }
         
         // $25 Coupon
         if (data == 'coupon3' && what == 'membership1'){
             document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for one year of membership in the Conservative Collegiates Group. Your first month's fee will be FREE and the remaining eleven months will cost $19.00.</h5>";
+        //alert("3x1");
         }
         else if (data == 'coupon3' && what == 'membership2'){
             document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for one year of membership in the Conservative Collegiates Group. Your first month's fee will be $14.00 and the remaining eleven months will cost $39.00.</h5>";
+        //alert("3x2");
         }
         else if (data == 'coupon3' && what == 'membership3'){
             document.getElementById("confirmation").innerHTML="<h3>Congratulations!</h3><h5>You have just signed up for one year of membership in the Cardiac Courtesy Group. There will be no charge for this service over your one year membership.</h5>";
+        //alert("3x3");
         }
         
         // Page clears for Confirmation
@@ -91,27 +100,29 @@
                     <img src="images/coupon3.png" draggable="true" ondragstart="drag(event)" id="coupon3" alt="$25 off coupon">
                 </div>
                 
-                <div id="membership1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <h2>Conservative Collegiates Group</h2>
-                    <p>Type A blood from starving college students.</p><br/>
-                    <p><strong>Memberships costs $19.00 a month.</strong></p>
-                </div>
-                
-                <div id="membership2" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <h2>Professional Bite-Me Group</h2>
-                    <p>All blood types and access to healthy, fully employed professionals.</p><br/>
-                    <p><strong>Membership costs $39.00 a month.</strong></p>
-                </div>
-                
-                <div id="membership3" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <h2>Cardiac Courtesy Group</h2>
-                    <p>Access to attorneys.</p><br/><br/>
-                    <p><strong>Free (professional courtesy).</strong></p>
+                <div id="membership">
+                    <div id="membership1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h2>Conservative Collegiates Group</h2>
+                        <p>Type A blood from starving college students.</p><br/>
+                        <p><strong>Memberships costs $19.00 a month.</strong></p>
+                    </div>
+                    
+                    <div id="membership2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h2>Professional Bite-Me Group</h2>
+                        <p>All blood types and access to healthy, fully employed professionals.</p><br/>
+                        <p><strong>Membership costs $39.00 a month.</strong></p>
+                    </div>
+                    
+                    <div id="membership3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h2>Cardiac Courtesy Group</h2>
+                        <p>Access to attorneys.</p><br/><br/>
+                        <p><strong>Free (professional courtesy).</strong></p>
+                    </div>
                 </div>
     
             </div>
         
-        <p id="confirmation"></p>
+        <p id="confirmation"><br/></p>
             
         </div>
         
