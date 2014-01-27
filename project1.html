@@ -22,7 +22,43 @@
         var f=document.getElementById(data); // f is object of the planet
         ev.target.appendChild(f);
     
-        var what=ev.target.id;
+        var what = ev.target.id;
+     
+        // Coupon Conditionals
+        // $5 Coupon
+        if (data == 'coupon1' && what == 'membership1'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for three months of membership in the Conservative Collegiates Group. Your first month's fee will be $14.00 and the remaining two months will cost $19.00.</h5>";
+        }
+        else if (data == 'coupon1' && what == 'membership2'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for three months of membership in the Professional Bite&#8211;Me Group. Your first month's fee will be $34.00 and the remaining two months will cost $39.00.</h5>";
+        }
+    
+        // $10 Coupon
+        if (data == 'coupon2' && what == 'membership1'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for six months of membership in the Conservative Collegiates Group. Your first month's fee will be $9.00 and the remaining five months will cost $19.00.</h5>";
+        }
+        else if (data == 'coupon2' && what == 'membership2'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for six months of membership in the Professional Bite&#8211;Me Group. Your first month's fee will be $29.00 and the remaining five months will cost $39.00.</h5>";
+        }
+        
+        // $25 Coupon
+        if (data == 'coupon3' && what == 'membership1'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for one year of membership in the Conservative Collegiates Group. Your first month's fee will be FREE and the remaining eleven months will cost $19.00.</h5>";
+        }
+        else if (data == 'coupon3' && what == 'membership2'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you have just signed up for one year of membership in the Conservative Collegiates Group. Your first month's fee will be $14.00 and the remaining eleven months will cost $39.00.</h5>";
+        }
+        
+        // Free Membership
+        if (data == 'coupon1' && what == 'membership3' || data == 'coupon2' && what == 'membership3' || data == 'coupon3' && what == 'membership3'){
+            document.getElementById("confirmation").innerHTML="<h3>Congratulations &#8212; </h3><h5>you now have access to attorneys at no charge.</h5>";
+        }
+        
+        // Page clears for Confirmation
+        var element = document.getElementById("content");
+        while (element.firstChild){
+            element.removeChild(element.firstChild);
+        }
     }
     
     </script> 
@@ -35,39 +71,39 @@
             <h1>Welcome to Vampire Association of Transylflorida</h1>
         </div> 
         
-        <div id="content">
-            <div id="coupons">
-                <p>Please drag one of the following coupons:</p>
-                <img src="images/coupon1.png" draggable="true" ondragstart="drag(event)" id="coupon1" alt="$5 off coupon">
-                <img src="images/coupon2.png" draggable="true" ondragstart="drag(event)" id="coupon2" alt="$10 off coupon">
-                <img src="images/coupon3.png" draggable="true" ondragstart="drag(event)" id="coupon3" alt="$25 off coupon">
-            </div>
-            
-            <div id="memberships">
-                <h1>Memberships</h1>
-            
+        <div id="content_container">
+        
+            <div id="content">
+                <div id="coupons">
+                    <p>Please drag one of the following coupons:</p>
+                    <img src="images/coupon1.png" draggable="true" ondragstart="drag(event)" id="coupon1" alt="$5 off coupon">
+                    <img src="images/coupon2.png" draggable="true" ondragstart="drag(event)" id="coupon2" alt="$10 off coupon">
+                    <img src="images/coupon3.png" draggable="true" ondragstart="drag(event)" id="coupon3" alt="$25 off coupon">
+                </div>
+                
                 <div id="membership1" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <h2>Conservative Collegiates Group</h2>
                     <p>Type A blood from starving college students.</p>
-                    <p>Memberships costs $19.00 a month</p>
+                    <p>Memberships costs $19.00 a month.</p>
                 </div>
                 
                 <div id="membership2" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <h2>Professional Bite-Me Group</h2>
                     <p>All blood types and access to healthy, fully employed professionals.</p>
-                    <p>Membership costs $39.00 a month</p>
+                    <p>Membership costs $39.00 a month.</p>
                 </div>
                 
                 <div id="membership3" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <h2>Cardiac Courtesy Group</h2>
                     <p>Access to attorneys.</p>
-                    <p>Free (professional courtesy)</p>
+                    <p>Free (professional courtesy).</p>
                 </div>
+    
             </div>
-
-        </div>
         
         <p id="confirmation"></p>
+            
+        </div>
         
     </div>
 </body>
