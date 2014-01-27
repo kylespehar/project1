@@ -7,10 +7,69 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     
     <script>
+    // Given Functions
+    function allowDrop(ev){
+        ev.preventDefault();
+    }
+    
+    function drag(ev){
+        ev.dataTransfer.setData("Text",ev.target.id);
+    }
+    
+    function drop(ev){
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("Text"); //data is id of planet
+        var f=document.getElementById(data); // f is object of the planet
+        ev.target.appendChild(f);
+    
+        var what=ev.target.id;
+    }
+    
     </script> 
 </head>   
     
 <body>
+    <div id="container">
+    
+        <div id="header">
+            <h1>Welcome to Vampire Association of Transylflorida</h1>
+        </div> 
+        
+        <div id="content">
+            <div id="coupons">
+                <p>Please drag one of the following coupons:</p>
+                <img src="images/coupon1.png" draggable="true" ondragstart="drag(event)" id="coupon1" alt="$5 off coupon">
+                <img src="images/coupon2.png" draggable="true" ondragstart="drag(event)" id="coupon2" alt="$10 off coupon">
+                <img src="images/coupon3.png" draggable="true" ondragstart="drag(event)" id="coupon3" alt="$25 off coupon">
+            </div>
+            
+            <div id="memberships">
+                <h1>Memberships</h1>
+            
+                <div id="membership1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Conservative Collegiates Group</h2>
+                    <p>Type A blood from starving college students.</p>
+                    <p>Memberships costs $19.00 a month</p>
+                </div>
+                
+                <div id="membership2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Professional Bite-Me Group</h2>
+                    <p>All blood types and access to healthy, fully employed professionals.</p>
+                    <p>Membership costs $39.00 a month</p>
+                </div>
+                
+                <div id="membership3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Cardiac Courtesy Group</h2>
+                    <p>Access to attorneys.</p>
+                    <p>Free (professional courtesy)</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <p id="confirmation"></p>
+        
+    </div>
 </body>
 
 </html>

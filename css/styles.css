@@ -1,0 +1,23 @@
+body {
+    /*background-image: url('../images/background.png');*/
+}
+
+#container {
+    background-color: #686868;
+    width: 70%;
+    height: 1000 px;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+#membership1,
+#membership2,
+#membership3 {
+    float: left;
+    background-color: red;
+    width: 230px;
+    height: 150px; 
+    margin: 10px;
+    padding: 3px;
+    font-size: 12px;
+}
